@@ -190,6 +190,7 @@ body::before {
   align-items: center;
   min-height: 50px;
   padding-bottom: 6px;
+  font-size: clamp(1.8rem, 6vw, 2.4rem);
 }
 
 .hero__divider {
@@ -355,7 +356,7 @@ body::before {
 .details__rail {
   position: relative;
   width: 14px;
-  min-height: 98px;
+  min-height: 82px;
 }
 
 .details__rail::before {
@@ -710,10 +711,6 @@ section.details .details__label {
   margin-bottom: 0;
 }
 
-.rsvp .section-head h2 {
-  font-size: clamp(1.42rem, 5.2vw, 1.82rem);
-}
-
 .rsvp .section-head p:last-child {
   font-size: 12px;
   line-height: 1;
@@ -908,10 +905,6 @@ section.details .details__label {
 
 .accounts--compact .section-head {
   margin-bottom: 12px;
-}
-
-.accounts--compact .section-head h2 {
-  font-size: clamp(1.4rem, 5vw, 1.8rem);
 }
 
 .accounts__lead {
