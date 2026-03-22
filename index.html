@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>장세범 & 김나영 결혼식에 초대합니다</title>
+    <meta
+      name="description"
+      content="장세범 김나영의 모바일 청첩장입니다. 일정, 장소, 참석 여부 정보를 한 페이지에 담았습니다."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero reveal">
+        <div class="hero__image-wrap hero__image-wrap--full-bleed">
+          <img id="hero-image" class="hero__image" alt="메인 웨딩 사진" />
+          <div class="hero__veil"></div>
+        </div>
+        <div class="hero__content">
+          <p class="eyebrow" id="hero-badge"></p>
+          <h1 class="hero__title" id="hero-title"></h1>
+          <div class="hero__meta">
+            <p class="hero__date" id="hero-date"></p>
+            <p class="hero__venue" id="hero-venue"></p>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="intro reveal">
+          <div class="section-head">
+            <p class="eyebrow">Our new biginning</p>
+            <h2>소중한 분들을 초대합니다</h2>
+          </div>
+          <div class="intro__message" id="invitation-message"></div>
+        </section>
+
+        <section class="photo-break photo-break--single photo-break--full-bleed reveal" aria-label="웨딩 사진">
+          <figure class="photo-break__frame photo-break__frame--plain">
+            <img id="photo-inline-intro" alt="웨딩 사진" loading="lazy" />
+          </figure>
+        </section>
+
+        <section class="details reveal" id="details">
+          <div class="section-head">
+            <p class="eyebrow">Details</p>
+            <h2>예식 정보</h2>
+          </div>
+          <div class="details__list">
+            <article class="details__item">
+              <div class="details__rail" aria-hidden="true"></div>
+              <div class="details__body">
+                <p class="details__label">Date</p>
+                <h3 id="event-date"></h3>
+                <p id="event-time"></p>
+              </div>
+            </article>
+            <article class="details__item">
+              <div class="details__rail" aria-hidden="true"></div>
+              <div class="details__body">
+                <p class="details__label">Venue</p>
+                <h3 id="event-venue"></h3>
+                <p id="event-address"></p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="timeline reveal">
+          <div class="section-head">
+            <p class="eyebrow">Schedule</p>
+            <h2>당일 순서</h2>
+          </div>
+          <div class="timeline__list" id="timeline-list"></div>
+        </section>
+
+        <section class="photo-break photo-break--single photo-break--inset reveal" aria-label="웨딩 사진">
+          <figure class="photo-break__frame photo-break__frame--plain">
+            <img id="photo-inline-spotlight" alt="웨딩 사진" loading="lazy" />
+          </figure>
+        </section>
+
+        <section class="spotlight spotlight--copy-only reveal">
+          <div class="spotlight__copy">
+            <p class="eyebrow" id="spotlight-eyebrow"></p>
+            <h2 id="spotlight-title"></h2>
+            <p class="spotlight__text" id="spotlight-text"></p>
+          </div>
+        </section>
+
+        <section class="transport reveal">
+          <div class="section-head">
+            <p class="eyebrow">Guide</p>
+            <h2>오시는 길과 주차 안내</h2>
+          </div>
+          <div class="guide-stack">
+            <article class="guide-block guide-block--single">
+              <div class="guide-block__copy">
+                <p class="eyebrow">Location</p>
+                <h3>위치</h3>
+                <p class="guide-block__address" id="studio-guide-address"></p>
+                <p class="guide-block__note" id="studio-guide-copy"></p>
+                <ul class="guide-block__list" id="studio-guide-list"></ul>
+                <div class="maps__actions">
+                  <a class="map-link map-link--naver" id="naver-map-link" href="#" target="_blank" rel="noreferrer">
+                    <span class="map-link__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" role="img">
+                        <rect x="2" y="2" width="20" height="20" rx="6"></rect>
+                        <path d="M8 7.5v9h2.2v-4.8l3.6 4.8H16v-9h-2.2v4.74L10.2 7.5z"></path>
+                      </svg>
+                    </span>
+                    <span class="map-link__label">
+                      <strong>네이버 지도</strong>
+                      <small>길찾기 열기</small>
+                    </span>
+                  </a>
+                  <a class="map-link map-link--kakao" id="kakao-map-link" href="#" target="_blank" rel="noreferrer">
+                    <span class="map-link__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" role="img">
+                        <path d="M12 3c-4.9 0-8.8 3.1-8.8 7.1 0 2.5 1.5 4.6 3.9 5.9l-1 3.7c-.08.28.22.5.47.35l4.22-2.53c.4.05.8.08 1.2.08 4.86 0 8.8-3.14 8.8-7.08C20.8 6.14 16.86 3 12 3z"></path>
+                        <path d="M9 8.4h2v2.55l2.7-2.55h2.55l-3.32 3.1 3.5 4.2h-2.5l-2.4-2.93-.53.5v2.43H9z"></path>
+                      </svg>
+                    </span>
+                    <span class="map-link__label">
+                      <strong>카카오맵</strong>
+                      <small>길찾기 열기</small>
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="guide-block guide-block--accent">
+              <div class="guide-block__copy guide-block__copy--with-map">
+                <p class="eyebrow">Parking</p>
+                <h3>주차</h3>
+                <p class="guide-block__address" id="parking-address"></p>
+                <ul class="guide-block__list" id="parking-guide-list"></ul>
+                <div class="map-card map-card--embedded">
+                  <div class="map-card__head">
+                    <p class="eyebrow">Parking Route</p>
+                    <h3>주차 약도</h3>
+                  </div>
+                  <img
+                    id="parking-map-image"
+                    class="map-card__diagram"
+                    src="./parking-map.jpg"
+                    alt="기업은행 주차장 약도"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="rsvp reveal">
+          <div class=" section-head">
+            <p class="eyebrow">Attendance</p>
+            <h2>참석 여부를 알려주세요</h2>
+          </div>
+          <p class="accounts__lead">행사 준비를 위해 참석 여부를 남겨주시면 감사드리겠습니다.</p>
+          <form class="rsvp-form" id="rsvp-form">
+            <div class="rsvp-form__grid">
+              <label class="field">
+                <span>성함</span>
+                <input id="rsvp-name" name="name" type="text" placeholder="" required />
+              </label>
+              <label class="field">
+                <span>연락처 뒤 4자리</span>
+                <input
+                  id="rsvp-phone"
+                  name="phone"
+                  type="tel"
+                  inputmode="numeric"
+                  maxlength="4"
+                  minlength="4"
+                  pattern="[0-9]{4}"
+                  placeholder=""
+                  required
+                />
+              </label>
+              <fieldset class="choice-group field" id="attendance-field">
+                <legend>참석 여부</legend>
+                <div class="choice-group__options">
+                  <label class="choice-pill">
+                    <input id="attendance-yes" name="attendance" type="radio" value="참석" checked required />
+                    <span>참석</span>
+                  </label>
+                  <label class="choice-pill">
+                    <input id="attendance-no" name="attendance" type="radio" value="불참" required />
+                    <span>불참</span>
+                  </label>
+                </div>
+              </fieldset>
+              <label class="field">
+                <span>추가 인원 (본인 외 동행 인원)</span>
+                <input
+                  id="rsvp-guests"
+                  name="guestCount"
+                  type="number"
+                  min="0"
+                  max="10"
+                  value="0"
+                  placeholder="0"
+                  disabled
+                />
+              </label>
+            </div>
+            <fieldset class="choice-group field" id="meal-field">
+              <legend>식사 여부</legend>
+              <div class="choice-group__options">
+                <label class="choice-pill">
+                  <input id="meal-yes" name="meal" type="radio" value="예정" checked disabled />
+                  <span>식사 예정</span>
+                </label>
+                <label class="choice-pill">
+                  <input id="meal-no" name="meal" type="radio" value="안 함" disabled />
+                  <span>식사 안 함</span>
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="choice-group field" id="parking-field">
+              <legend>주차 이용 여부</legend>
+              <div class="choice-group__options">
+                <label class="choice-pill">
+                  <input id="parking-no" name="parking" type="radio" value="미이용" checked disabled />
+                  <span>차량 없이 방문</span>
+                </label>
+                <label class="choice-pill">
+                  <input id="parking-yes" name="parking" type="radio" value="이용 예정" disabled />
+                  <span>이용 예정</span>
+                </label>
+              </div>
+            </fieldset>
+            <p class="rsvp__note" id="rsvp-parking-note"></p>
+            <label class="field">
+              <span>전하고 싶은 말</span>
+              <textarea
+                id="rsvp-message"
+                name="message"
+                rows="2"
+                placeholder="참석하시는데 저희가 미리 참고해야 하는 사항이 있으면 남겨주세요."
+              ></textarea>
+            </label>
+            <div class="rsvp__actions">
+              <button class="button button--primary" id="rsvp-submit" type="submit">
+                참석 의사 전달
+              </button>
+              <span class="rsvp-form__status" id="rsvp-status"></span>
+            </div>
+          </form>
+        </section>
+
+        <section class="accounts accounts--compact reveal">
+          <div class="section-head">
+            <p class="eyebrow">Account</p>
+            <h2>마음 전하실 곳</h2>
+          </div>
+          <p class="accounts__lead">축하의 마음을 전해주실 분들을 위해 계좌 정보를 남겨두었습니다.</p>
+          <div class="card-grid" id="account-grid"></div>
+        </section>
+      </main>
+
+      <footer class="footer reveal">
+        <p class="footer__title" id="footer-title"></p>
+        <p class="footer__text" id="footer-text"></p>
+      </footer>
+
+      <section class="photo-break photo-break--single photo-break--full-bleed reveal" aria-label="웨딩 사진">
+        <figure class="photo-break__frame photo-break__frame--plain">
+          <img id="photo-inline-bottom" alt="웨딩 사진" loading="lazy" />
+        </figure>
+      </section>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
